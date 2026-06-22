@@ -1,10 +1,55 @@
 # 数据集下载说明
 
-本项目使用两个漏洞检测数据集。由于文件体积较大，不包含在Git仓库中，请按以下方式获取：
+本项目使用两个漏洞检测数据集。文件已通过Git LFS上传到仓库，可以直接克隆获取，也可以通过以下方式下载。
 
 ---
 
-## 📥 数据集下载
+## 📥 数据集下载方式
+
+### 🚀 方式1：直接从GitHub克隆（推荐）
+
+所有数据集文件已通过Git LFS上传到仓库，克隆时会自动下载：
+
+```bash
+# 克隆仓库（包含所有数据集）
+git clone https://github.com/gfzgfzgfz/DualStream.git
+cd DualStream
+
+# 数据集已自动下载到 数据集/ 文件夹
+ls -lh 数据集/
+```
+
+**如果只需要代码，不需要数据集**：
+```bash
+# 跳过LFS文件下载
+GIT_LFS_SKIP_SMUDGE=1 git clone https://github.com/gfzgfzgfz/DualStream.git
+```
+
+---
+
+### 📦 方式2：百度网盘下载（国内用户推荐）
+
+**百度网盘链接**: https://pan.baidu.com/s/1Tw2GaD39ZuGvllMTPmZ5iQ?pwd=5x92
+
+**提取码**: `5x92`
+
+**包含文件**:
+- `full_data_vul_lines_all.csv` (748 MB) - BigVul数据集
+- `2015-10-27-ffmpeg-v1-2-2.zip` (114 MB) - FFmpeg v1.2.2
+- `2015-10-27-openssl-v1-0-1e.zip` (119 MB) - OpenSSL v1.0.1e
+
+**下载后放置位置**:
+```bash
+# 将下载的文件放到项目的数据集文件夹
+DualStream/数据集/
+├── full_data_vul_lines_all.csv
+├── 2015-10-27-ffmpeg-v1-2-2.zip
+└── 2015-10-27-openssl-v1-0-1e.zip
+```
+
+---
+
+### 🌐 方式3：从官方源下载
 
 ### 1. BigVul 数据集
 
@@ -12,9 +57,7 @@
 
 **大小**: ~748 MB
 
-**下载方式**:
-
-**选项A - 从官方源下载**:
+**官方源下载**:
 ```bash
 # 克隆BigVul仓库
 git clone https://github.com/ZeoVan/MSR_20_Code_vulnerability_CSV_Dataset.git
@@ -24,14 +67,6 @@ wget https://github.com/ZeoVan/MSR_20_Code_vulnerability_CSV_Dataset/raw/master/
 # 重命名为
 mv MSR_data_cleaned.csv full_data_vul_lines_all.csv
 ```
-
-**选项B - 使用预处理脚本**:
-```bash
-cd chap2code/process_data
-python download_bigvul.py  # 自动下载和预处理
-```
-
-**放置位置**: `数据集/full_data_vul_lines_all.csv`
 
 **数据集信息**:
 - 函数总数: 101,568 (5,260个漏洞函数)
@@ -48,7 +83,7 @@ python download_bigvul.py  # 自动下载和预处理
 - `2015-10-27-ffmpeg-v1-2-2.zip` (~114 MB)
 - `2015-10-27-openssl-v1-0-1e.zip` (~119 MB)
 
-**下载方式**:
+**官方源下载**:
 
 **FFmpeg v1.2.2**:
 ```bash
@@ -62,13 +97,6 @@ mv n1.2.2.zip 2015-10-27-ffmpeg-v1-2-2.zip
 # 从官方源下载
 wget https://github.com/openssl/openssl/archive/refs/tags/OpenSSL_1_0_1e.zip
 mv OpenSSL_1_0_1e.zip 2015-10-27-openssl-v1-0-1e.zip
-```
-
-**放置位置**: 
-```
-数据集/
-├── 2015-10-27-ffmpeg-v1-2-2.zip
-└── 2015-10-27-openssl-v1-0-1e.zip
 ```
 
 **数据集信息**:
