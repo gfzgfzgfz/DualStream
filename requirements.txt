@@ -1,0 +1,13 @@
+torch==2.0.1
+torchvision
+torchaudio
+transformers==4.30.0
+tokenizers==0.13.3
+numpy
+pandas
+scikit-learn
+tqdm
+matplotlib
+seaborn
+tree-sitter
+networkx

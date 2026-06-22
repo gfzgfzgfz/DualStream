@@ -1,0 +1,93 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# PyTorch
+*.pt
+*.pth
+*.ckpt
+checkpoint*.pt
+best_model/
+checkpoints/
+
+# 大型数据文件
+*.csv
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# 数据集文件夹中的大文件（但保留目录结构）
+数据集/*.csv
+数据集/*.zip
+数据集/raw/
+数据集/processed/
+
+# 缓存和临时文件
+dataset/
+cache/
+coarse_cache/
+*.cache
+*.tmp
+*.log
+
+# 训练输出
+output/
+logs/
+results/
+runs/
+wandb/
+
+# IDE和编辑器
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*.ipynb
+
+# 环境变量
+.env
+.env.local
+
+# 特定于项目的排除
+chap3code/
+!chap2code/
+
+# 预训练模型（太大，用户自行下载）
+*codebert*/
+*CodeBERT*/
+func_best_model/
+slice_best_model/
+
+# 但保留README和配置文件
+!README.md
+!QUICKSTART.md
+!requirements.txt
+!.gitignore
