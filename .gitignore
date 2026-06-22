@@ -31,16 +31,16 @@ checkpoint*.pt
 best_model/
 checkpoints/
 
-# 大型数据文件
-*.csv
-*.zip
+# 大型数据文件（通过Git LFS管理，不再排除）
+# *.csv
+# *.zip
 *.tar.gz
 *.rar
 *.7z
 
-# 数据集文件夹中的大文件（但保留目录结构）
-数据集/*.csv
-数据集/*.zip
+# 数据集文件夹中的大文件现在通过Git LFS管理
+# 数据集/*.csv
+# 数据集/*.zip
 数据集/raw/
 数据集/processed/
 
